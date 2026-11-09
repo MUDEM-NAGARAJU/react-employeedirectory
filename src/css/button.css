@@ -1,0 +1,8 @@
+
+.button_comp button{
+
+    height:5vh;
+    width:10vw;
+    font-size: large;
+    display: inline;
+}
