@@ -27,6 +27,15 @@
 .app .employeeinfo{
 
   flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.app .employeeinfo .employeecard{
+  height: 40vh; 
+  margin-top: 2px;
+  width:50%;
+  
 }
 .app .footer{
 
