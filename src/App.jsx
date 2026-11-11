@@ -2,7 +2,10 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Employeecard from './components/Employeecard.jsx';
 import './App.css';
-
+import './css/button.css';
+import Image_comp from './components/Image_comp.jsx';
+import { useState } from 'react';
+import Counter_comp from './components/Counter_comp.jsx';
 function App() {
   let information=[
     {
@@ -30,8 +33,11 @@ function App() {
       Description:"A soctware engineer who write APIs and deal with databases and deploy applications"
     }
   ];
+  let [show,setshow]=useState(true);
+
+  let clicked=()=>{setshow(!show)};
   return (
-    
+    /*
     <div className='app'>
       <Header />
         <div className="employeeinfo">
@@ -45,6 +51,14 @@ function App() {
         </div>
       
       <Footer />
+    </div>*/
+
+    
+    <div>
+      <div className='button_comp'>
+      <button onClick={clicked}>SHOW/HIDE</button>
+      </div>
+    {show ? < Image_comp />:< Counter_comp />}
     </div>
     
   );
