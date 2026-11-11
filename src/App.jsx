@@ -58,7 +58,7 @@ function App() {
       <div className='button_comp'>
       <button onClick={clicked}>SHOW/HIDE</button>
       </div>
-    {show ? < Image_comp />:< Counter_comp />}
+    {show ? < Image_comp />:""}
     </div>
     
   );
