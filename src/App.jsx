@@ -30,7 +30,7 @@ function App() {
           {
             info.map((it)=>{
               
-              return <Employeecard name={it.firstName} role={it.role} location={it.address.city} gender={it.gender} />
+              return <Employeecard name={it.firstName} role={it.role} location={it.address.city} gender={it.gender}  key={it.id}/>
             })
           }
         </div>
