@@ -14,15 +14,7 @@ function App() {
     let get_url='https://dummyjson.com/users';
 
     axios.get(get_url).then((obj)=>{
-      let new_users=[];
-      obj.data.users.map((i)=>{
-        if((new_users.length)<4) 
-          new_users.push(i);
-        else
-          return setinfo(new_users);
-
-
-      })
+      setinfo(obj.data.users)
 
     }).catch((err)=>{
       console.log(err);
@@ -30,7 +22,6 @@ function App() {
 
 
   },[]);
-
   return (
 
     <div className='app'>
