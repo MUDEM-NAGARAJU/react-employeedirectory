@@ -8,11 +8,10 @@ export default function Employeecard(props){
             <div className="content">
 
                 <ul>
-
                     <li>Name : {props.name}</li>
                     <li>Role : {props.role}</li>
                     <li>Location : {props.location}</li>
-                    <li>Description : {props.description}</li>
+                    <li>Gender : {props.gender}</li>
                 
                 </ul>
 
