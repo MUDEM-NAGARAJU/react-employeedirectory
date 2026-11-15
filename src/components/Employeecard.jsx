@@ -12,6 +12,8 @@ export default function Employeecard(props){
                     <li>Role : {props.role}</li>
                     <li>Location : {props.location}</li>
                     <li>Gender : {props.gender}</li>
+                    {props.images ? <img src={props.images} alt="" />:''}
+                    
                 
                 </ul>
 

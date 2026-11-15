@@ -3,42 +3,38 @@ import Footer from './components/Footer.jsx';
 import Employeecard from './components/Employeecard.jsx';
 import './App.css';
 import './css/button.css';
+import Sidebar from './components/Sidebar.jsx';
 import axios from 'axios';
 import { useState,useEffect } from 'react';
+import Postcomponent from './components/Postcomponent.jsx';
+import Viewcomponent from './components/Viewcomponent.jsx';
+import { Route,Routes,BrowserRouter } from 'react-router-dom';
 
 function App() {
 
-  let [info,setinfo]=useState([]);
-  useEffect(()=>{
 
-    let get_url='https://dummyjson.com/users';
-
-    axios.get(get_url).then((obj)=>{
-      setinfo(obj.data.users)
-
-    }).catch((err)=>{
-      console.log(err);
-    });
-
-
-  },[]);
+  
   return (
 
     <div className='app'>
+      <BrowserRouter>
       <Header />
-        <div className="employeeinfo">
-          {
-            info.map((it)=>{
-              
-              return <Employeecard name={it.firstName} role={it.role} location={it.address.city} gender={it.gender}  key={it.id}/>
-            })
-          }
-        </div>
+      <Sidebar />
+      
+      <Routes>
+        <Route path="/view" element={<Viewcomponent />} ></Route>
+        <Route path='/add' element={<Postcomponent />}></Route>
+      
+      
+      </Routes>
       
       <Footer />
+      
+      </BrowserRouter>
     </div>
     
   );
+
 }
 
 export default App;

@@ -1,0 +1,47 @@
+.postcomponent{
+    display: flex;
+    
+}
+
+.postcomponent .left{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.postcomponent .right{
+
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.postcomponent label{
+
+    font-size: xx-large;
+}
+
+.postcomponent label input{
+
+    font-size: x-large;
+}
+
+
+.postcomponentmain .btn button{
+
+    height: 5vh;
+    width: 10vw;
+    text-align: center;
+    font-size: x-large;
+    margin-left: 45vw;
+    margin-top: 10vh;
+    background-color: blue;
+    color: white;
+}
+
+.postcomponentmain .btn button:hover{
+
+    cursor: pointer;
+
+}
