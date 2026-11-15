@@ -24,7 +24,7 @@ export default function Viewcomponent(){
             {
                 info.map((it)=>{
                       
-                return <Employeecard name={it.firstName} role={it.role} location={it.address.city} gender={it.gender} images={it.image} key={it.id}/>
+                return <Employeecard id={it.id} name={it.firstName} role={it.role} location={it.address.city} gender={it.gender} images={it.image} key={it.id}/>
                 })
             }
         </div>

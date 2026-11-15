@@ -35,7 +35,10 @@
   justify-content: space-evenly;
 
 }
-.app .employeeinfo{
+.app .maincontent{
+  flex-grow: 1;
+}
+.app .maincontent .employeeinfo{
 
   flex-grow: 1;
   display: grid;
@@ -43,15 +46,13 @@
   gap: 20px;
 }
 
-.app .employeeinfo .employeecard{
+.app .maincontent .employeeinfo .employeecard{
   height: 50vh; 
   margin: 5px;
   width:50%;
   
 }
-.app .postcomponentmain{
-  flex-grow: 1;
-}
+
 .app .footer{
 
   height: 8vh;

@@ -9,6 +9,7 @@ import { useState,useEffect } from 'react';
 import Postcomponent from './components/Postcomponent.jsx';
 import Viewcomponent from './components/Viewcomponent.jsx';
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
+import Updatecomponent from './components/Updatecomponent.jsx';
 
 function App() {
 
@@ -20,14 +21,15 @@ function App() {
       <BrowserRouter>
       <Header />
       <Sidebar />
-      
+      <div className='maincontent'>
       <Routes>
         <Route path="/view" element={<Viewcomponent />} ></Route>
         <Route path='/add' element={<Postcomponent />}></Route>
+        <Route path="/update/:eno" element={<Updatecomponent />}></Route>
       
       
       </Routes>
-      
+      </div>
       <Footer />
       
       </BrowserRouter>

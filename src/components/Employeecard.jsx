@@ -1,6 +1,13 @@
 import Button_comp from './Button_comp.jsx';
 
+import {useNavigate} from "react-router-dom";
 export default function Employeecard(props){
+    let navigate=useNavigate();
+    let updateemployee=(eno)=>{
+
+        navigate('/update/'+eno);
+
+    }
     
     return (
         <div className="employeecard">
@@ -16,13 +23,10 @@ export default function Employeecard(props){
                     
                 
                 </ul>
-
-
             
                 <div className="buttons">
 
-                    <Button_comp content="View Profile" info={props.name} />
-                    <Button_comp content= "Contact" info={props.role} />
+                   <button onClick={()=>{updateemployee(props.id)}}>UPDATE</button>
                 
                 </div>
             </div>

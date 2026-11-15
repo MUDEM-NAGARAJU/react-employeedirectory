@@ -7,6 +7,7 @@ export default function Sidebar(){
             <ul>
                 <li><Link to="/view">View</Link></li>
                 <li><Link to="/add">Add</Link></li>
+                
 
             </ul>
 
